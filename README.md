@@ -31,12 +31,12 @@ Ce dépôt a pour objectif de :
 
 ##  Liens utiles
 
-- 🌐 Portfolio : https://emmanueldoungaportofolio.lovable.app/
-- 💼 LinkedIn : https://linkedin.com/in/emmanueldounga
-- 🧑‍💻 GitHub : https://github.com/emmax2306
+- Portfolio : https://emmanueldoungaportofolio.lovable.app/
+- LinkedIn : https://linkedin.com/in/emmanueldounga
+- GitHub : https://github.com/emmax2306
 
 ---
 
-## 📌 À propos
+##  À propos
 
-Ce dépôt est le portfolio associé sont utilisés comme support jusqu’à la présentation de l'epreuve E4 du **BTS SIO**
+Ce dépôt est le portofolio de Emmanuel Dounga sont utilisés comme support jusqu’à la présentation de l'epreuve E4 du **BTS SIO**
