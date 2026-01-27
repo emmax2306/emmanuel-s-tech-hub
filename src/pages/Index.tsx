@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Network, Shield, BookOpen, FileText, Search, Mail } from "lucide-react";
+import { ArrowRight, Server, Network, Shield, BookOpen, FileText, Search, Mail, Linkedin, Download } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 
@@ -65,12 +65,36 @@ const Index = () => {
               ))}
             </div>
 
-            <Link to="/projets">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-base">
-                Découvrir mes projets
-                <ArrowRight className="w-4 h-4 ml-2" />
+            <div className="flex flex-wrap gap-3">
+              <Link to="/projets">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-base">
+                  Découvrir mes projets
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              
+              <Button 
+                asChild
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary/10 px-6 py-3 text-base"
+              >
+                <a href="/documents/cv-emmanuel-dounga.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Télécharger mon CV
+                </a>
               </Button>
-            </Link>
+
+              <Button 
+                asChild
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary/10 px-6 py-3 text-base"
+              >
+                <a href="https://www.linkedin.com/in/emmanueldounga/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

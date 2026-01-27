@@ -1,4 +1,4 @@
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, Linkedin, FileText } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
@@ -36,15 +36,56 @@ const Contact = () => {
               </a>
             </div>
 
-            <Button 
-              asChild
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              <a href="mailto:emmanu.dounga@gmail.com">
-                <Send className="w-4 h-4 mr-2" />
-                Envoyer un email
+            <div className="p-4 rounded-xl bg-secondary/50 mb-6">
+              <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+              <a 
+                href="https://www.linkedin.com/in/emmanueldounga/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-primary hover:underline font-medium flex items-center justify-center gap-2"
+              >
+                <Linkedin className="w-5 h-5" />
+                linkedin.com/in/emmanueldounga
               </a>
-            </Button>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button 
+                asChild
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                <a href="mailto:emmanu.dounga@gmail.com">
+                  <Send className="w-4 h-4 mr-2" />
+                  Envoyer un email
+                </a>
+              </Button>
+
+              <Button 
+                asChild
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10"
+              >
+                <a href="/documents/cv-emmanuel-dounga.pdf" target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-4 h-4 mr-2" />
+                  Télécharger mon CV
+                </a>
+              </Button>
+
+              <Button 
+                asChild
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10"
+              >
+                <a 
+                  href="https://www.linkedin.com/in/emmanueldounga/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
