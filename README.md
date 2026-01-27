@@ -39,4 +39,4 @@ Ce dépôt a pour objectif de :
 
 ## 📌 À propos
 
-Ce dépôt et le portfolio associé sont utilisés comme support jusqu’à la présentation de l’examen **BTS SIO**.
+Ce dépôt est le portfolio associé sont utilisés comme support jusqu’à la présentation de l'epruve E4 du **BTS SIO**
