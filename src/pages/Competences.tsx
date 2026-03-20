@@ -50,16 +50,15 @@ const Competences = () => {
             title="Compétences"
             subtitle="Les domaines techniques maîtrisés dans le cadre de ma formation SISR"
           />
-
           <div className="grid gap-8">
             {skillCategories.map((category, index) => (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <SkillCard
-                  icon={category.icon}
-                  title={category.title}
-                  skills={category.skills}
-                />
-              </div>
+              <SkillCard
+                key={index}
+                icon={category.icon}
+                title={category.title}
+                skills={category.skills}
+                index={index}
+              />
             ))}
           </div>
         </div>
