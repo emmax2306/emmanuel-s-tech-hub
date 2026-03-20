@@ -121,9 +121,11 @@
     background: var(--gradient-hero);
   }
 
-  .glow-text {
-    text-shadow: 0 0 30px hsl(199 89% 48% / 0.5);
-  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
