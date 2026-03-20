@@ -1,6 +1,7 @@
 import { Search, Server, Network, Shield, Wrench, Globe, FileText, MessageSquare, Linkedin } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Veille = () => {
   const themes = [
@@ -27,51 +28,48 @@ const Veille = () => {
             subtitle="Suivre l'évolution des technologies pour maintenir ses compétences à jour"
           />
 
-          {/* Introduction */}
-          <div className="tech-card mb-10">
-            <div className="flex items-start gap-4">
-              <div className="p-3 rounded-xl bg-primary/10 text-primary">
-                <Search className="w-6 h-6" />
+          <ScrollReveal>
+            <div className="tech-card mb-10">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
+                  <Search className="w-6 h-6" />
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  La veille technologique consiste à suivre l'évolution des technologies 
+                  afin de maintenir ses compétences à jour et rester compétitif dans le domaine informatique.
+                </p>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                La veille technologique consiste à suivre l'évolution des technologies 
-                afin de maintenir ses compétences à jour et rester compétitif dans le domaine informatique.
-              </p>
             </div>
-          </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Themes */}
-            <div className="tech-card">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Thèmes de veille</h3>
-              <div className="space-y-3">
-                {themes.map((theme, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50"
-                  >
-                    <div className="text-primary">{theme.icon}</div>
-                    <span className="text-foreground">{theme.label}</span>
-                  </div>
-                ))}
+            <ScrollReveal direction="left" delay={0.1}>
+              <div className="tech-card h-full">
+                <h3 className="text-xl font-semibold text-foreground mb-6">Thèmes de veille</h3>
+                <div className="space-y-3">
+                  {themes.map((theme, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                      <div className="text-primary">{theme.icon}</div>
+                      <span className="text-foreground">{theme.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            {/* Tools */}
-            <div className="tech-card">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Outils utilisés</h3>
-              <div className="space-y-3">
-                {tools.map((tool, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50"
-                  >
-                    <div className="text-primary">{tool.icon}</div>
-                    <span className="text-foreground">{tool.label}</span>
-                  </div>
-                ))}
+            <ScrollReveal direction="right" delay={0.15}>
+              <div className="tech-card h-full">
+                <h3 className="text-xl font-semibold text-foreground mb-6">Outils utilisés</h3>
+                <div className="space-y-3">
+                  {tools.map((tool, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                      <div className="text-primary">{tool.icon}</div>
+                      <span className="text-foreground">{tool.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

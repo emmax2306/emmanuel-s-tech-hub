@@ -55,12 +55,9 @@ const Projets = () => {
             title="Projets"
             subtitle="Réalisations techniques effectuées dans le cadre de ma formation et de mes stages"
           />
-
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <ProjectCard title={project.title} tasks={project.tasks} />
-              </div>
+              <ProjectCard key={index} title={project.title} tasks={project.tasks} index={index} />
             ))}
           </div>
         </div>
