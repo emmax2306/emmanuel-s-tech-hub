@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const features = [
-    { icon: <Server className="w-5 h-5" />, label: "Administration Systèmes", path: "/competences" },
-    { icon: <Network className="w-5 h-5" />, label: "Réseaux", path: "/competences" },
-    { icon: <Shield className="w-5 h-5" />, label: "Sécurité", path: "/epreuve-e6" },
+    { icon: <Server className="w-5 h-5" />, label: "Administration Systèmes", path: "/epreuve-e6" },
+    { icon: <Network className="w-5 h-5" />, label: "Réseaux", path: "/epreuve-e6" },
+    { icon: <Shield className="w-5 h-5" />, label: "Support & Services", path: "/epreuve-e5" },
   ];
 
   const quickLinks = [
