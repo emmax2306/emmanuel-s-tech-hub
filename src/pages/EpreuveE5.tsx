@@ -21,8 +21,8 @@ const EpreuveE5 = () => {
       downloadLabel: "Télécharger le CV (PDF)",
     },
     {
-      title: "Tableau de Synthèse – Épreuve E4",
-      pdfPath: "/documents/tableau-synthese-e4.pdf",
+      title: "Tableau de Synthèse – Épreuve E5",
+      pdfPath: "/documents/tableau-synthese-e5.pdf",
       downloadLabel: "Télécharger le tableau (PDF)",
     },
   ];
