@@ -7,9 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "BTS SIO", path: "/bts-sio" },
-  { label: "Compétences", path: "/competences" },
-  { label: "Projets", path: "/projets" },
-  { label: "Documents", path: "/documents" },
+  { label: "Épreuve E5", path: "/epreuve-e5" },
   { label: "Épreuve E6", path: "/epreuve-e6" },
   { label: "Veille", path: "/veille" },
   { label: "Contact", path: "/contact" },

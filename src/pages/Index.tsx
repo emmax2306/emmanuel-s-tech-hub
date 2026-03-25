@@ -7,14 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const features = [
-    { icon: <Server className="w-5 h-5" />, label: "Administration Systèmes", path: "/competences" },
-    { icon: <Network className="w-5 h-5" />, label: "Réseaux", path: "/competences" },
-    { icon: <Shield className="w-5 h-5" />, label: "Sécurité", path: "/epreuve-e6" },
+    { icon: <Server className="w-5 h-5" />, label: "Administration Systèmes", path: "/epreuve-e6" },
+    { icon: <Network className="w-5 h-5" />, label: "Réseaux", path: "/epreuve-e6" },
+    { icon: <Shield className="w-5 h-5" />, label: "Support & Services", path: "/epreuve-e5" },
   ];
 
   const quickLinks = [
     { icon: <BookOpen className="w-5 h-5" />, label: "BTS SIO", desc: "Formation SISR", path: "/bts-sio" },
-    { icon: <FileText className="w-5 h-5" />, label: "Projets", desc: "Réalisations techniques", path: "/projets" },
+    { icon: <FileText className="w-5 h-5" />, label: "Épreuve E5", desc: "Support & services", path: "/epreuve-e5" },
+    { icon: <Shield className="w-5 h-5" />, label: "Épreuve E6", desc: "Admin systèmes & réseaux", path: "/epreuve-e6" },
     { icon: <Search className="w-5 h-5" />, label: "Veille", desc: "Technologies", path: "/veille" },
     { icon: <Mail className="w-5 h-5" />, label: "Contact", desc: "Me joindre", path: "/contact" },
   ];
