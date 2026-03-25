@@ -71,18 +71,27 @@ const Index = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               Je m'appelle <span className="text-foreground font-semibold">Emmanuel Dounga</span>, 
-              étudiant en BTS SIO – option SISR.
+              étudiant en <span className="text-foreground font-semibold">deuxième année de BTS SIO – option SISR</span> à l'EFREI Paris.
             </motion.p>
 
-            <motion.p
-              className="text-muted-foreground mb-8 leading-relaxed max-w-2xl"
+            <motion.div
+              className="text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-3"
               initial={{ opacity: 0, y: 24, filter: "blur(4px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
-              Ce portfolio présente mon parcours, mes compétences, mes projets techniques 
-              et mes expériences professionnelles.
-            </motion.p>
+              <p>
+                Au cours de ma formation et de mes stages, j'ai acquis une expérience concrète en{" "}
+                <span className="text-foreground font-medium">administration systèmes et réseaux</span>,{" "}
+                <span className="text-foreground font-medium">support utilisateurs</span> et{" "}
+                <span className="text-foreground font-medium">gestion de parc informatique</span>.
+              </p>
+              <p>
+                J'ai notamment réalisé des stages chez <span className="text-foreground font-medium">Scalesquad</span> (administration systèmes, déploiement réseau, GLPI/iTop) 
+                et <span className="text-foreground font-medium">Sinatek</span> (montage PC, diagnostic matériel, configuration Windows), 
+                et mené des projets techniques autour d'Active Directory, d'architectures multi-VLAN et de serveurs Linux.
+              </p>
+            </motion.div>
 
             <motion.div
               className="flex flex-wrap gap-2.5 mb-10"
