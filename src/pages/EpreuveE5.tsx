@@ -1,4 +1,4 @@
-import { BookOpen, CheckCircle, FileText, Download, Github, ExternalLink } from "lucide-react";
+import { BookOpen, CheckCircle, FileText, Download } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -15,11 +15,6 @@ const EpreuveE5 = () => {
   ];
 
   const documents = [
-    {
-      title: "Curriculum Vitae",
-      pdfPath: "/documents/cv-emmanuel-dounga.pdf",
-      downloadLabel: "Télécharger le CV (PDF)",
-    },
     {
       title: "Tableau de Synthèse – Épreuve E5",
       pdfPath: "/documents/tableau-synthese-e5.pdf",
@@ -64,24 +59,6 @@ const EpreuveE5 = () => {
           {/* Documents Section */}
           <ScrollReveal delay={0.1}>
             <h2 className="text-2xl font-bold text-foreground mb-6">Documents</h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.12}>
-            <div className="p-4 rounded-xl bg-primary/5 border border-primary/20 mb-8 flex items-center gap-3">
-              <Github className="w-5 h-5 text-primary flex-shrink-0" />
-              <p className="text-muted-foreground">
-                Les versions <span className="text-foreground font-medium">PDF</span> et{" "}
-                <span className="text-foreground font-medium">Excel</span> sont disponibles sur{" "}
-                <a
-                  href="https://github.com/emmax2306"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium inline-flex items-center gap-1"
-                >
-                  GitHub <ExternalLink className="w-3 h-3" />
-                </a>.
-              </p>
-            </div>
           </ScrollReveal>
 
           <div className="grid gap-8">

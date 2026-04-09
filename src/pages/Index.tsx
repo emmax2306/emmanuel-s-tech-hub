@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Server, Network, Shield, BookOpen, FileText, Search, Mail, Linkedin, Download, Github, ChevronRight } from "lucide-react";
+import { Server, Network, Shield, BookOpen, FileText, Search, Mail, Linkedin, Download, Github, ChevronRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
@@ -118,13 +118,6 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Link to="/projets">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-base active:scale-[0.97] transition-transform">
-                  Découvrir mes projets
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              
               <Button asChild variant="outline" className="border-border text-foreground hover:border-primary hover:text-primary px-6 py-3 text-base active:scale-[0.97]">
                 <a href="/documents/cv-emmanuel-dounga.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
