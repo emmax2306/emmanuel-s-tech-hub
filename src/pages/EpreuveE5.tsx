@@ -39,6 +39,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C4",
         label: "Vérification des conditions de la continuité d'un service informatique",
+        pdfPath: "/documents/C4.pdf",
       },
       {
         code: "C5",
@@ -48,6 +49,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C6",
         label: "Vérification du respect des règles d'utilisation des ressources numériques",
+        pdfPath: "/documents/C6.pdf",
       },
     ],
   },
@@ -62,10 +64,12 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C8",
         label: "Traitement des demandes concernant les applicatifs, services réseau et système",
+        pdfPath: "/documents/C8%20simulation%20AD%20machine%20cliente.pdf",
       },
       {
         code: "C9",
         label: "Traitement des demandes concernant les applications",
+        pdfPath: "/documents/C9.pdf",
       },
     ],
   },
@@ -80,6 +84,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C11",
         label: "Référencement des services en ligne de l'organisation et mesure de leur visibilité",
+        pdfPath: "/documents/C11.pdf",
       },
       {
         code: "C12",
@@ -108,6 +113,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C16",
         label: "Test d'intégration et d'acceptation d'un service",
+        pdfPath: "/documents/C16.pdf",
       },
       {
         code: "C17",
@@ -117,6 +123,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C18",
         label: "Accompagnement des utilisateurs dans la mise en place d'un service",
+        pdfPath: "/documents/C18.pdf",
       },
     ],
   },
@@ -218,57 +225,60 @@ const EpreuveE5 = () => {
           </ScrollReveal>
 
           <div className="space-y-12">
-            {blocsCompetences.map((bloc, blocIndex) => (
-              <ScrollReveal key={bloc.title} delay={0.05 * blocIndex}>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-4 border-b border-border pb-2">
-                    {bloc.title}
-                  </h3>
-                  <div className="space-y-6">
-                    {bloc.items.map((item) => (
-                      <div
-                        key={item.code}
-                        className={cn(
-                          "rounded-xl border border-border bg-card overflow-hidden",
-                          item.pdfPath && "shadow-sm"
-                        )}
-                      >
-                        <div className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start gap-3 border-b border-border/80 bg-secondary/30">
-                          <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-primary/10 text-primary text-sm font-semibold shrink-0">
-                            {item.code}
-                          </span>
-                          <p className="text-foreground text-sm sm:text-base leading-relaxed">
-                            {item.label}
-                          </p>
-                        </div>
-                        {item.pdfPath ? (
-                          <div className="p-4 sm:p-5 pt-0 sm:pt-4">
-                            <div className="rounded-xl overflow-hidden border border-border mb-4">
-                              <embed
-                                src={item.pdfPath}
-                                type="application/pdf"
-                                className="w-full"
-                                style={{ minHeight: "520px", height: "60vh", maxHeight: "720px" }}
-                              />
-                            </div>
-                            <Button
-                              asChild
-                              variant="outline"
-                              size="sm"
-                              className="border-border hover:border-primary hover:text-primary"
-                            >
-                              <a href={item.pdfPath} target="_blank" rel="noopener noreferrer">
-                                <Download className="w-4 h-4 mr-2" />
-                                Télécharger le document ({item.code})
-                              </a>
-                            </Button>
-                          </div>
-                        ) : null}
+            {blocsCompetences.map((bloc) => (
+              <div key={bloc.title}>
+                {/*
+                  Ne pas envelopper tout le bloc dans ScrollReveal : avec plusieurs PDF intégrés,
+                  la hauteur totale est énorme et whileInView (amount ~20 %) peut ne jamais se
+                  déclencher en haut du bloc → tout reste en opacity:0.
+                */}
+                <h3 className="text-lg font-semibold text-foreground mb-4 border-b border-border pb-2 scroll-mt-24">
+                  {bloc.title}
+                </h3>
+                <div className="space-y-6">
+                  {bloc.items.map((item) => (
+                    <div
+                      key={item.code}
+                      className={cn(
+                        "rounded-xl border border-border bg-card overflow-hidden",
+                        item.pdfPath && "shadow-sm"
+                      )}
+                    >
+                      <div className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start gap-3 border-b border-border/80 bg-secondary/30">
+                        <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-primary/10 text-primary text-sm font-semibold shrink-0">
+                          {item.code}
+                        </span>
+                        <p className="text-foreground text-sm sm:text-base leading-relaxed">
+                          {item.label}
+                        </p>
                       </div>
-                    ))}
-                  </div>
+                      {item.pdfPath ? (
+                        <div className="p-4 sm:p-5 pt-0 sm:pt-4">
+                          <div className="rounded-xl overflow-hidden border border-border mb-4">
+                            <embed
+                              src={item.pdfPath}
+                              type="application/pdf"
+                              className="w-full"
+                              style={{ minHeight: "520px", height: "60vh", maxHeight: "720px" }}
+                            />
+                          </div>
+                          <Button
+                            asChild
+                            variant="outline"
+                            size="sm"
+                            className="border-border hover:border-primary hover:text-primary"
+                          >
+                            <a href={item.pdfPath} target="_blank" rel="noopener noreferrer">
+                              <Download className="w-4 h-4 mr-2" />
+                              Télécharger le document ({item.code})
+                            </a>
+                          </Button>
+                        </div>
+                      ) : null}
+                    </div>
+                  ))}
                 </div>
-              </ScrollReveal>
+              </div>
             ))}
           </div>
         </div>
