@@ -30,6 +30,7 @@ const blocsCompetences: CompetenceBloc[] = [
         code: "C2",
         label:
           "Exploitation des référentiels, normes et standards adoptés par le prestataire informatique",
+        pdfPath: "/documents/C2%201.pdf",
       },
       {
         code: "C3",
@@ -80,6 +81,7 @@ const blocsCompetences: CompetenceBloc[] = [
         code: "C10",
         label:
           "Participation à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques",
+        pdfPath: "/documents/C10%201.pdf",
       },
       {
         code: "C11",
@@ -89,13 +91,18 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C12",
         label: "Participation à l'évolution d'un site Web exploitant les données de l'organisation",
+        pdfPath: "/documents/C12.pdf",
       },
     ],
   },
   {
     title: "Bloc 4 — Travailler en mode projet",
     items: [
-      { code: "C13", label: "Analyse des objectifs et des modalités d'organisation d'un projet" },
+      {
+        code: "C13",
+        label: "Analyse des objectifs et des modalités d'organisation d'un projet",
+        pdfPath: "/documents/C13.pdf",
+      },
       {
         code: "C14",
         label: "Planification des activités",
@@ -104,6 +111,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C15",
         label: "Évaluation des indicateurs de suivi d'un projet et analyse des écarts",
+        pdfPath: "/documents/C15.pdf",
       },
     ],
   },
