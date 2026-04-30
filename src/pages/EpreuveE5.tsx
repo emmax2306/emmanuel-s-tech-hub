@@ -150,8 +150,9 @@ const blocsCompetences: CompetenceBloc[] = [
 
 const documentsTableau = [
   {
-    title: "Tableau de Synthèse – Épreuve E5",
-    pdfPath: "/documents/tableau-synthese-e5.pdf",
+    title: "Tableau de Synthèse",
+    pdfPath:
+      "/documents/tableau%20de%20synth%C3%A8se%20e4%20(1).xlsx%20portofolio.xlsx%20-%20Tableau%20de%20synth%C3%A8se%20%C3%89preuve%20E4%20(1).pdf",
     downloadLabel: "Télécharger le tableau (PDF)",
   },
 ];

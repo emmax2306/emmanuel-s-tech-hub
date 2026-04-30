@@ -20,12 +20,6 @@ const Index = () => {
     { icon: <Mail className="w-5 h-5" />, label: "Contact", desc: "Me joindre", path: "/contact" },
   ];
 
-  const stats = [
-    { value: "5", label: "Projets réalisés" },
-    { value: "3", label: "Domaines techniques" },
-    { value: "2", label: "Épreuves BTS" },
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -140,20 +134,6 @@ const Index = () => {
               </Button>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Stats bar */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 border-b border-border">
-        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6">
-          {stats.map((stat, index) => (
-            <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            </ScrollReveal>
-          ))}
         </div>
       </section>
 
