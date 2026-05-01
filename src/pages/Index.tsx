@@ -137,36 +137,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Purpose Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <h2 className="section-title text-center mb-4">Ce portfolio sert de support pour</h2>
-            <p className="text-center text-muted-foreground mb-14 max-w-xl mx-auto">
-              Un outil complet pour présenter mes compétences et réalisations.
-            </p>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { icon: <FileText className="w-6 h-6 text-primary" />, title: "Évaluation BTS SIO", desc: "Support pour les épreuves E4 et E6" },
-              { icon: <Server className="w-6 h-6 text-primary" />, title: "Compétences techniques", desc: "Systèmes, réseaux et infrastructures" },
-              { icon: <Shield className="w-6 h-6 text-primary" />, title: "Profil professionnel", desc: "Mise en valeur de mon parcours" },
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="tech-card text-center group h-full">
-                  <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    {item.icon}
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-lg">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Quick Links */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-card/30">
         <div className="max-w-7xl mx-auto">

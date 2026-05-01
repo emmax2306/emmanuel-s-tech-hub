@@ -139,6 +139,11 @@ const blocsCompetences: CompetenceBloc[] = [
     title: "Bloc 6 — Organiser son développement personnel",
     items: [
       {
+        code: "C19",
+        label:
+          "Mettre en place son environnement d'apprentissage personnel - Mission : creer un espace de travail numerique (Notion, OneNote ou Obsidian) et documenter ses apprentissages (notes, fiches, README).",
+      },
+      {
         code: "C20",
         label: "Mettre en œuvre des outils et stratégies de veille informationnelle",
       },
