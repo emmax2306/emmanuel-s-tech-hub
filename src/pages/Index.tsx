@@ -113,6 +113,13 @@ const Index = () => {
               transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <Button asChild variant="outline" className="border-border text-foreground hover:border-primary hover:text-primary px-6 py-3 text-base active:scale-[0.97]">
+                <a href="/documents/attestations_stage_BTS_SIO.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Attestation de stage
+                </a>
+              </Button>
+
+              <Button asChild variant="outline" className="border-border text-foreground hover:border-primary hover:text-primary px-6 py-3 text-base active:scale-[0.97]">
                 <a href="/documents/cv-emmanuel-dounga.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4 mr-2" />
                   Mon CV

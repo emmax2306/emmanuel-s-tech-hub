@@ -142,13 +142,22 @@ const blocsCompetences: CompetenceBloc[] = [
         code: "C19",
         label:
           "Mettre en place son environnement d'apprentissage personnel - Mission : creer un espace de travail numerique (Notion, OneNote ou Obsidian) et documenter ses apprentissages (notes, fiches, README).",
+        pdfPath: "/documents/C19.pdf",
       },
       {
         code: "C20",
         label: "Mettre en œuvre des outils et stratégies de veille informationnelle",
       },
-      { code: "C21", label: "Gérer son identité professionnelle" },
-      { code: "C22", label: "Développer son projet professionnel" },
+      {
+        code: "C21",
+        label: "Gérer son identité professionnelle",
+        pdfPath: "/documents/C21.pdf",
+      },
+      {
+        code: "C22",
+        label: "Développer son projet professionnel",
+        pdfPath: "/documents/C22.pdf",
+      },
     ],
   },
 ];
