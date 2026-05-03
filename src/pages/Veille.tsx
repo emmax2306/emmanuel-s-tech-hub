@@ -1,4 +1,4 @@
-import { Search, ShieldCheck, Network, Layers, Link2, Server, Globe, Linkedin } from "lucide-react";
+import { Search, ShieldCheck, Network, Layers, Link2, Server, Globe, Linkedin, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -26,14 +26,24 @@ const Veille = () => {
       desc: "Actualite des entreprises et des technologies.",
     },
     {
-      icon: <Network className="w-5 h-5" />,
-      label: "Blogs techniques specialises",
-      desc: "Blogs dedies aux reseaux informatiques.",
-    },
-    {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
       desc: "Suivi de professionnels du domaine IT.",
+    },
+  ];
+
+  const ciscoDocLinks = [
+    {
+      label: "VLAN — configuration port / VLAN (Cisco)",
+      href: "https://www.cisco.com/c/fr_ca/support/docs/smb/switches/cisco-small-business-300-series-managed-switches/smb5653-configure-port-to-vlan-interface-settings-on-a-switch-throug.html",
+    },
+    {
+      label: "EtherChannel",
+      href: "https://www.cisco.com/c/fr_ca/support/docs/lan-switching/etherchannel/12023-4.html",
+    },
+    {
+      label: "Stack de switches (Catalyst 3750)",
+      href: "https://www.cisco.com/c/fr_ca/support/docs/switches/catalyst-3750-series-switches/71925-cat3750-create-switch-stks.html",
     },
   ];
 
@@ -145,6 +155,25 @@ const Veille = () => {
                       <p className="text-sm text-muted-foreground">{source.desc}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-border">
+                  <h4 className="text-sm font-semibold text-foreground mb-3">Documentation Cisco (liens)</h4>
+                  <ul className="space-y-2">
+                    {ciscoDocLinks.map((link) => (
+                      <li key={link.href}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary hover:underline inline-flex items-center gap-1.5 break-words"
+                        >
+                          {link.label}
+                          <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </ScrollReveal>

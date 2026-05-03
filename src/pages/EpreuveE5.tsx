@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BookOpen, FileText, Download } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
@@ -10,6 +11,8 @@ type CompetenceItem = {
   label: string;
   /** Chemin sous /public/documents — ajoutez les PDF au fur et à mesure */
   pdfPath?: string;
+  /** Lien interne (ex. C20 → page Veille) */
+  internalLink?: { to: string; label: string };
 };
 
 type CompetenceBloc = {
@@ -147,6 +150,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C20",
         label: "Mettre en œuvre des outils et stratégies de veille informationnelle",
+        internalLink: { to: "/veille", label: "Voir ma veille technologique" },
       },
       {
         code: "C21",
@@ -264,7 +268,7 @@ const EpreuveE5 = () => {
                       key={item.code}
                       className={cn(
                         "rounded-xl border border-border bg-card overflow-hidden",
-                        item.pdfPath && "shadow-sm"
+                        (item.pdfPath || item.internalLink) && "shadow-sm"
                       )}
                     >
                       <div className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start gap-3 border-b border-border/80 bg-secondary/30">
@@ -275,27 +279,41 @@ const EpreuveE5 = () => {
                           {item.label}
                         </p>
                       </div>
-                      {item.pdfPath ? (
-                        <div className="p-4 sm:p-5 pt-0 sm:pt-4">
-                          <div className="rounded-xl overflow-hidden border border-border mb-4">
-                            <embed
-                              src={item.pdfPath}
-                              type="application/pdf"
-                              className="w-full"
-                              style={{ minHeight: "520px", height: "60vh", maxHeight: "720px" }}
-                            />
-                          </div>
-                          <Button
-                            asChild
-                            variant="outline"
-                            size="sm"
-                            className="border-border hover:border-primary hover:text-primary"
-                          >
-                            <a href={item.pdfPath} target="_blank" rel="noopener noreferrer">
-                              <Download className="w-4 h-4 mr-2" />
-                              Télécharger le document ({item.code})
-                            </a>
-                          </Button>
+                      {item.pdfPath || item.internalLink ? (
+                        <div className="p-4 sm:p-5 pt-0 sm:pt-4 space-y-3">
+                          {item.pdfPath ? (
+                            <>
+                              <div className="rounded-xl overflow-hidden border border-border">
+                                <embed
+                                  src={item.pdfPath}
+                                  type="application/pdf"
+                                  className="w-full"
+                                  style={{ minHeight: "520px", height: "60vh", maxHeight: "720px" }}
+                                />
+                              </div>
+                              <Button
+                                asChild
+                                variant="outline"
+                                size="sm"
+                                className="border-border hover:border-primary hover:text-primary"
+                              >
+                                <a href={item.pdfPath} target="_blank" rel="noopener noreferrer">
+                                  <Download className="w-4 h-4 mr-2" />
+                                  Télécharger le document ({item.code})
+                                </a>
+                              </Button>
+                            </>
+                          ) : null}
+                          {item.internalLink ? (
+                            <Button
+                              asChild
+                              variant="outline"
+                              size="sm"
+                              className="border-border hover:border-primary hover:text-primary w-full sm:w-auto"
+                            >
+                              <Link to={item.internalLink.to}>{item.internalLink.label}</Link>
+                            </Button>
+                          ) : null}
                         </div>
                       ) : null}
                     </div>
