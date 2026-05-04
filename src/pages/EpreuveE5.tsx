@@ -150,6 +150,7 @@ const blocsCompetences: CompetenceBloc[] = [
       {
         code: "C20",
         label: "Mettre en œuvre des outils et stratégies de veille informationnelle",
+        pdfPath: "/documents/C20.pdf",
         internalLink: { to: "/veille", label: "Voir ma veille technologique" },
       },
       {
