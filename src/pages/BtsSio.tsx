@@ -1,4 +1,4 @@
-import { GraduationCap, Code, Server, CheckCircle, Briefcase, BookOpen, Award, Users } from "lucide-react";
+import { GraduationCap, Code, Server, CheckCircle, Briefcase, BookOpen } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -33,15 +33,6 @@ const BtsSio = () => {
     { title: "Développeur web / mobile", desc: "Créer des sites et applications" },
     { title: "Analyste programmeur", desc: "Analyser les besoins et développer des solutions" },
     { title: "Intégrateur web", desc: "Intégrer des maquettes et interfaces utilisateur" },
-  ];
-
-  const epreuves = [
-    { code: "E1", title: "Culture générale et expression", desc: "Épreuve écrite de français" },
-    { code: "E2", title: "Expression et communication en anglais", desc: "Épreuve écrite et orale d'anglais" },
-    { code: "E3", title: "Mathématiques", desc: "Épreuve écrite de mathématiques appliquées" },
-    { code: "E4", title: "Support et mise à disposition de services informatiques", desc: "Épreuve pratique et écrite portant sur les compétences communes" },
-    { code: "E5", title: "Administration des systèmes et des réseaux (SISR) / Conception et développement d'applications (SLAM)", desc: "Épreuve pratique liée à l'option choisie" },
-    { code: "E6", title: "Cybersécurité des services informatiques", desc: "Épreuve orale portant sur la sécurité et la protection des données" },
   ];
 
   return (
@@ -146,29 +137,6 @@ const BtsSio = () => {
             </ScrollReveal>
           </div>
 
-          {/* Épreuves du BTS SIO */}
-          <ScrollReveal delay={0.1}>
-            <div className="tech-card mb-12">
-              <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                <Award className="w-5 h-5 text-primary" />
-                Les épreuves du BTS SIO
-              </h3>
-              <div className="space-y-3">
-                {epreuves.map((ep, index) => (
-                  <div key={index} className="flex items-start gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <span className="px-2.5 py-1 rounded-lg bg-primary/10 text-primary text-sm font-bold flex-shrink-0">
-                      {ep.code}
-                    </span>
-                    <div>
-                      <p className="text-foreground font-medium text-sm">{ep.title}</p>
-                      <p className="text-muted-foreground text-xs mt-0.5">{ep.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-
           {/* Débouchés */}
           <ScrollReveal delay={0.1}>
             <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
@@ -213,31 +181,6 @@ const BtsSio = () => {
             </ScrollReveal>
           </div>
 
-          {/* Poursuites d'études */}
-          <ScrollReveal delay={0.1}>
-            <div className="tech-card">
-              <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-3">
-                <Users className="w-5 h-5 text-primary" />
-                Poursuites d'études
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Après un BTS SIO, il est possible de poursuivre ses études pour se spécialiser davantage :
-              </p>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {[
-                  { title: "Licence professionnelle", desc: "Bac+3 en informatique, réseaux ou développement" },
-                  { title: "Bachelor informatique", desc: "Formation en école spécialisée (Bac+3)" },
-                  { title: "École d'ingénieurs", desc: "Admission parallèle en école d'ingénieurs IT" },
-                  { title: "Master informatique", desc: "Poursuite en université jusqu'à Bac+5" },
-                ].map((item, index) => (
-                  <div key={index} className="p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <p className="text-foreground font-medium text-sm">{item.title}</p>
-                    <p className="text-muted-foreground text-xs">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
     </Layout>
