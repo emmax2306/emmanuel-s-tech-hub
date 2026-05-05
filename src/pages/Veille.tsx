@@ -32,20 +32,6 @@ const Veille = () => {
     },
   ];
 
-  const ciscoDocLinks = [
-    {
-      label: "VLAN — configuration port / VLAN (Cisco)",
-      href: "https://www.cisco.com/c/fr_ca/support/docs/smb/switches/cisco-small-business-300-series-managed-switches/smb5653-configure-port-to-vlan-interface-settings-on-a-switch-throug.html",
-    },
-    {
-      label: "EtherChannel",
-      href: "https://www.cisco.com/c/fr_ca/support/docs/lan-switching/etherchannel/12023-4.html",
-    },
-    {
-      label: "Stack de switches (Catalyst 3750)",
-      href: "https://www.cisco.com/c/fr_ca/support/docs/switches/catalyst-3750-series-switches/71925-cat3750-create-switch-stks.html",
-    },
-  ];
 
   return (
     <Layout>
@@ -106,6 +92,15 @@ const Veille = () => {
                     <li>Reduction de la propagation des attaques</li>
                     <li>Meilleure organisation du reseau</li>
                   </ul>
+                  <a
+                    href="https://www.cisco.com/c/fr_ca/support/docs/smb/switches/cisco-small-business-300-series-managed-switches/smb5653-configure-port-to-vlan-interface-settings-on-a-switch-throug.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline"
+                  >
+                    Documentation Cisco VLAN
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden />
+                  </a>
                 </div>
 
                 <div className="p-4 rounded-lg bg-secondary/40">
@@ -121,6 +116,15 @@ const Veille = () => {
                     <li>Redondance en cas de panne</li>
                     <li>Amelioration de la disponibilite</li>
                   </ul>
+                  <a
+                    href="https://www.cisco.com/c/fr_ca/support/docs/lan-switching/etherchannel/12023-4.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline"
+                  >
+                    Documentation Cisco EtherChannel
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden />
+                  </a>
                 </div>
 
                 <div className="p-4 rounded-lg bg-secondary/40">
@@ -136,6 +140,15 @@ const Veille = () => {
                     <li>Reduction des erreurs de configuration</li>
                     <li>Continuite de service</li>
                   </ul>
+                  <a
+                    href="https://www.cisco.com/c/fr_ca/support/docs/switches/catalyst-3750-series-switches/71925-cat3750-create-switch-stks.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline"
+                  >
+                    Documentation Cisco Stack de switch
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden />
+                  </a>
                 </div>
               </div>
             </div>
@@ -157,24 +170,6 @@ const Veille = () => {
                   ))}
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-border">
-                  <h4 className="text-sm font-semibold text-foreground mb-3">Documentation Cisco (liens)</h4>
-                  <ul className="space-y-2">
-                    {ciscoDocLinks.map((link) => (
-                      <li key={link.href}>
-                        <a
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-primary hover:underline inline-flex items-center gap-1.5 break-words"
-                        >
-                          {link.label}
-                          <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </ScrollReveal>
 
